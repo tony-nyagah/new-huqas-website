@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/main.astro';
+import { Button } from '@/components/ui/button';
+---
+
+<Layout title="Style Guide | HuQAS">
+	<main class="max-w-4xl mx-auto px-6 py-16 space-y-16">
+
+		<!-- Header -->
+		<section>
+			<h1>HuQAS Design System</h1>
+			<p class="mt-2">A visual reference for the brand colors, typography, and components used across the new huqas.org website.</p>
+		</section>
+
+		<!-- Colors -->
+		<section class="space-y-4">
+			<h2>Color Palette</h2>
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+				<div>
+					<div class="w-full aspect-square rounded-xl bg-huqas-purple"></div>
+					<p class="text-sm mt-2 font-semibold">Purple</p>
+					<p class="text-xs text-muted-foreground">#9061A7</p>
+				</div>
+				<div>
+					<div class="w-full aspect-square rounded-xl bg-huqas-purple-dark"></div>
+					<p class="text-sm mt-2 font-semibold">Purple Dark</p>
+					<p class="text-xs text-muted-foreground">#7D277A</p>
+				</div>
+				<div>
+					<div class="w-full aspect-square rounded-xl bg-huqas-navy"></div>
+					<p class="text-sm mt-2 font-semibold">Navy</p>
+					<p class="text-xs text-muted-foreground">#1E1D55</p>
+				</div>
+				<div>
+					<div class="w-full aspect-square rounded-xl bg-huqas-gold"></div>
+					<p class="text-sm mt-2 font-semibold">Gold</p>
+					<p class="text-xs text-muted-foreground">#FADB00</p>
+				</div>
+				<div>
+					<div class="w-full aspect-square rounded-xl bg-huqas-green"></div>
+					<p class="text-sm mt-2 font-semibold">Green</p>
+					<p class="text-xs text-muted-foreground">#25D366</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Typography -->
+		<section class="space-y-6">
+			<h2>Typography</h2>
+			<p>Font family: <strong>Inter Variable</strong> — via Fontsource (self-hosted).</p>
+
+			<div class="space-y-4 border border-border rounded-xl p-6">
+				<h1>Heading 1 — The Quick Brown Fox</h1>
+				<h2>Heading 2 — Jumps Over the Lazy Dog</h2>
+				<h3>Heading 3 — External Quality Assessment</h3>
+				<h4>Heading 4 — Proficiency Testing Programs</h4>
+				<p>Body text — HuQAS (Human Quality Assessment Services) is an NGO that offers accredited EQA services to public and private medical laboratories in Africa. Our mission is to improve the quality and reliability of medical testing across the continent.</p>
+				<p class="text-sm text-muted-foreground">Small / Muted text — Used for captions, dates, and secondary information.</p>
+			</div>
+		</section>
+
+		<!-- Buttons (ShadCN) -->
+		<section class="space-y-6">
+			<h2>Buttons</h2>
+			<p>All buttons use the ShadCN UI component and inherit HuQAS brand colors from CSS variables.</p>
+
+			<div class="space-y-4">
+				<h4>Variants</h4>
+				<div class="flex flex-wrap gap-4 items-center">
+					<Button client:load>Default</Button>
+					<Button client:load variant="secondary">Secondary</Button>
+					<Button client:load variant="outline">Outline</Button>
+					<Button client:load variant="ghost">Ghost</Button>
+					<Button client:load variant="destructive">Destructive</Button>
+				</div>
+			</div>
+
+			<div class="space-y-4">
+				<h4>Sizes</h4>
+				<div class="flex flex-wrap gap-4 items-center">
+					<Button client:load size="sm">Small</Button>
+					<Button client:load>Default</Button>
+					<Button client:load size="lg">Large</Button>
+					<Button client:load size="icon">⚡</Button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Links -->
+		<section class="space-y-4">
+			<h2>Links</h2>
+			<p>Links are <a href="#">styled bold with navy color</a> and transition to <a href="#">purple on hover</a>.</p>
+		</section>
+
+	</main>
+</Layout>

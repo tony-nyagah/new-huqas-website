@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/inter';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Human Quality Assessment Services (HuQAS)',
+	description = 'HuQAS is an ISO 17043 accredited provider of External Quality Assessment (EQA) and Proficiency Testing (PT) programs for medical laboratories in Africa.',
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
